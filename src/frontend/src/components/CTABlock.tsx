@@ -1,5 +1,5 @@
 import { Link } from '@tanstack/react-router';
-import { Phone } from 'lucide-react';
+import { Phone, Calendar } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 export default function CTABlock() {
@@ -10,7 +10,7 @@ export default function CTABlock() {
           Ready to Get Your Sprinkler System Working Perfectly?
         </h2>
         <p className="mx-auto mb-8 max-w-2xl text-lg text-primary-foreground/90 md:text-xl">
-          Call now for fast, reliable service or request a free estimate for your irrigation needs.
+          Call now for fast, reliable service or schedule an appointment online at your convenience.
         </p>
         
         <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
@@ -23,6 +23,16 @@ export default function CTABlock() {
               <Phone className="mr-2 h-6 w-6" />
               (973) 955-8340
             </a>
+          </Button>
+          <Button 
+            asChild 
+            size="lg" 
+            className="border-2 border-primary-foreground bg-secondary hover:bg-secondary/90 text-secondary-foreground text-xl px-10 py-7 h-auto font-bold shadow-lg"
+          >
+            <Link to="/schedule">
+              <Calendar className="mr-2 h-6 w-6" />
+              Schedule Online
+            </Link>
           </Button>
           <Button 
             asChild 

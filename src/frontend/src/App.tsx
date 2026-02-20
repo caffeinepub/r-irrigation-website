@@ -6,6 +6,7 @@ import Services from './pages/Services';
 import ServiceAreas from './pages/ServiceAreas';
 import Reviews from './pages/Reviews';
 import Contact from './pages/Contact';
+import Schedule from './pages/Schedule';
 import CliftonNJ from './pages/CliftonNJ';
 import ParamusNJ from './pages/ParamusNJ';
 import WayneNJ from './pages/WayneNJ';
@@ -60,6 +61,12 @@ const contactRoute = createRoute({
   component: Contact
 });
 
+const scheduleRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: '/schedule',
+  component: Schedule
+});
+
 const cliftonRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: '/clifton-nj',
@@ -91,6 +98,7 @@ const routeTree = rootRoute.addChildren([
   serviceAreasRoute,
   reviewsRoute,
   contactRoute,
+  scheduleRoute,
   cliftonRoute,
   paramusRoute,
   wayneRoute,

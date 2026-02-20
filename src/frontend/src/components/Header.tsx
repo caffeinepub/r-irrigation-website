@@ -13,7 +13,8 @@ export default function Header() {
     { path: '/services', label: 'Services' },
     { path: '/service-areas', label: 'Service Areas' },
     { path: '/reviews', label: 'Reviews' },
-    { path: '/contact', label: 'Contact' }
+    { path: '/contact', label: 'Contact' },
+    { path: '/schedule', label: 'Schedule Service' }
   ];
 
   const isActive = (path: string) => currentPath === path;
@@ -25,9 +26,9 @@ export default function Header() {
           {/* Logo */}
           <Link to="/" className="flex items-center">
             <img 
-              src="/assets/generated/logo.dim_300x100.png" 
+              src="/assets/9962DF11-5A7E-4582-A58F-DBC7D2FE64A8.png" 
               alt="R Irrigation" 
-              className="h-12 w-auto"
+              className="h-16 w-auto"
             />
           </Link>
 

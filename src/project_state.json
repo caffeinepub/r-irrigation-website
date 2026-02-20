@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 3,
+  "projectStateVersion": 5,
   "summary": "Mobile-first local service website for R Irrigation, a sprinkler and irrigation company in Northern New Jersey. Clean, professional design with deep blue and bright green color scheme. Primary goal: generate phone calls and estimate requests from homeowners. Includes homepage with hero section, services grid, reviews, and SEO-optimized city pages for Clifton, Paramus, Wayne, and Hackensack NJ.",
   "architectural_notes": [
     "Mobile-first responsive layout optimized for fast loading",
@@ -11,7 +11,6 @@
   ],
   "known_issues": [],
   "isFixRequest": false,
-  "imageRequirements": "## Required Images\n- R Irrigation company logo featuring water and lawn theme with deep blue and bright green colors (logo.dim_300x100.png)\n- Professional sprinkler system in action on a green lawn for hero section background (hero-sprinkler.dim_1920x1080.png)\n- Icon representing fast service - clock or speed symbol in deep blue (icon-fast-service.dim_64x64.png)\n- Icon representing experienced technicians - tools or technician symbol in deep blue (icon-experienced.dim_64x64.png)\n- Icon representing reliable work - checkmark or shield symbol in deep blue (icon-reliable.dim_64x64.png)\n- Icon representing Northern NJ service - location pin or map symbol in deep blue (icon-location.dim_64x64.png)",
   "existing_features": [
     {
       "id": "feature-create-a-header-component-with-r-irrigation-logo-on-the-left-navigation-menu-with-links-to-home-services-service-areas-reviews-and-contact-pages-prominent-phone-number-973-955-8340-displayed-clearly-and-a-get-free-estimate-button",
@@ -132,6 +131,38 @@
         "REQ-15"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-create-a-new-scheduling-page-accessible-from-the-main-navigation-with-a-form-allowing-customers-to-request-service-appointments-the-form-should-include-fields-for-customer-name-phone-number-email-service-address-preferred-date-preferred-time-window-morning-afternoon-evening-service-type-dropdown-matching-the-six-services-sprinkler-repair-sprinkler-installation-spring-startup-winterization-leak-detection-system-upgrades-and-additional-notes-include-form-validation-and-a-submit-button-that-displays-a-confirmation-message-upon-submission",
+      "title": "Create a new scheduling page accessible from the main navigation with a form allowing customers to request service appointments. The form should include fields for customer name, phone number, email, service address, preferred date, preferred time window (morning/afternoon/evening), service type dropdown (matching the six services: Sprinkler Repair, Sprinkler Installation, Spring Startup, Winterization, Leak Detection, System Upgrades), and additional notes. Include form validation and a submit button that displays a confirmation message upon submission.",
+      "reqIds": [
+        "REQ-16"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-schedule-service-link-to-the-header-navigation-menu-between-contact-and-the-phone-number-routing-to-the-new-scheduling-page-at-schedule",
+      "title": "Add a 'Schedule Service' link to the header navigation menu between 'Contact' and the phone number, routing to the new scheduling page at /schedule",
+      "reqIds": [
+        "REQ-17"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-all-instances-of-the-r-irrigation-logo-throughout-the-site-in-the-header-component-and-anywhere-else-it-appears-with-the-user-provided-logo-image-file-9962df11-5a7e-4582-a58f-dbc7d2fe64a8-png-maintaining-appropriate-sizing-and-responsive-behavior",
+      "title": "Replace all instances of the R Irrigation logo throughout the site (in the Header component and anywhere else it appears) with the user-provided logo image file 9962DF11-5A7E-4582-A58F-DBC7D2FE64A8.png, maintaining appropriate sizing and responsive behavior",
+      "reqIds": [
+        "REQ-18"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-prominent-schedule-service-call-to-action-buttons-on-the-homepage-herosection-alongside-existing-call-now-and-request-free-estimate-buttons-and-in-the-ctablock-component-to-drive-traffic-to-the-new-scheduling-page",
+      "title": "Add prominent 'Schedule Service' call-to-action buttons on the homepage HeroSection (alongside existing Call Now and Request Free Estimate buttons) and in the CTABlock component to drive traffic to the new scheduling page",
+      "reqIds": [
+        "REQ-19"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
@@ -156,6 +187,18 @@
     {
       "id": "AR-4",
       "summary": "Mobile-first responsive design with deep blue and bright green color scheme, white/light background, high-contrast CTA buttons",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Add online scheduling functionality",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Replace logo with user-provided image",
       "reqIds": [],
       "status": "pending"
     }

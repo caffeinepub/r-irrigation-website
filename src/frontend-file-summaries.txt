@@ -1,15 +1,15 @@
 {
   "frontend/src/index.css": "Global styles with OKLCH color system defining deep blue primary and bright green secondary colors for water/lawn theme with white background.",
   "frontend/tailwind.config.js": "Tailwind configuration with custom color tokens, responsive container settings, and professional contractor design system.",
-  "frontend/src/App.tsx": "Main application component with TanStack Router setup using Outlet for child route rendering, defining all routes for home, services, and city-specific SEO pages with Header/Footer layout.",
-  "frontend/src/components/Header.tsx": "Sticky header component with R Irrigation logo, responsive navigation menu, prominent phone number display, and Get Free Estimate CTA button.",
+  "frontend/src/App.tsx": "Main application component with TanStack Router setup including all routes (home, services, service areas, reviews, contact, schedule, and city-specific SEO pages) with Header/Footer layout.",
+  "frontend/src/components/Header.tsx": "Sticky header component with updated R Irrigation logo, responsive navigation menu including Schedule Service link, prominent phone number display, and Get Free Estimate CTA button.",
   "frontend/src/components/Footer.tsx": "Footer component with contact information, service areas list, estimate request form, and caffeine.ai attribution with UTM tracking.",
-  "frontend/src/components/HeroSection.tsx": "Hero section with headline, subheadline about services, dual CTA buttons for calling and requesting estimates, and trust indicators.",
+  "frontend/src/components/HeroSection.tsx": "Hero section with headline, subheadline about services, three CTA buttons (Call Now, Schedule Service, Request Estimate), and trust indicators.",
   "frontend/src/components/WhyChooseUs.tsx": "Four-column benefits section with icons highlighting fast service, experienced technicians, reliable work, and Northern NJ coverage.",
   "frontend/src/components/ServicesGrid.tsx": "Six-service grid displaying sprinkler repair, installation, spring startup, winterization, leak detection, and system upgrades with descriptions.",
   "frontend/src/components/ServiceAreaSection.tsx": "Service area section emphasizing Clifton NJ as primary area plus Bergen and Passaic County towns in organized display.",
   "frontend/src/components/ReviewsSection.tsx": "Customer testimonials section with three 5-star reviews from homeowners in Clifton, Wayne, and Paramus with realistic feedback.",
-  "frontend/src/components/CTABlock.tsx": "Bold call-to-action section with large phone number display and dual CTA buttons encouraging immediate contact.",
+  "frontend/src/components/CTABlock.tsx": "Bold call-to-action section with large phone number display and three CTA buttons (call, schedule online, request estimate) encouraging immediate contact.",
   "frontend/src/pages/Home.tsx": "Homepage assembling all sections in required order: hero, why choose us, services, service areas, reviews, and CTA block.",
   "frontend/src/pages/Services.tsx": "Detailed services page with expanded descriptions of all six irrigation services and comprehensive feature lists.",
   "frontend/src/pages/ServiceAreas.tsx": "Complete service areas page listing all towns in Bergen and Passaic Counties with links to city-specific pages.",
@@ -19,5 +19,6 @@
   "frontend/src/pages/ParamusNJ.tsx": "SEO-optimized city page for Paramus NJ with unique content focused on irrigation services, local property considerations, and expert positioning.",
   "frontend/src/pages/WayneNJ.tsx": "SEO-optimized city page for Wayne NJ with unique localized content about sprinkler repair, township-specific details, and service benefits.",
   "frontend/src/pages/HackensackNJ.tsx": "SEO-optimized city page for Hackensack NJ with unique content about comprehensive sprinkler service, seasonal maintenance, and local expertise.",
-  "frontend/src/hooks/useQueries.ts": "Placeholder file for React Query hooks; currently empty as no backend data operations are required for this static website."
+  "frontend/src/hooks/useQueries.ts": "Placeholder file for React Query hooks; currently empty as no backend data operations are required for this static website.",
+  "frontend/src/pages/Schedule.tsx": "Complete scheduling page with comprehensive service request form including customer details, service type selection, date/time preferences, form validation, and confirmation message display."
 }

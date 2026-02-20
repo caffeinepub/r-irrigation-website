@@ -1,5 +1,5 @@
 import { Link } from '@tanstack/react-router';
-import { Phone, CheckCircle } from 'lucide-react';
+import { Phone, CheckCircle, Calendar } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 export default function HeroSection() {
@@ -37,8 +37,18 @@ export default function HeroSection() {
             <Button 
               asChild 
               size="lg" 
-              variant="outline"
               className="border-2 border-secondary bg-secondary hover:bg-secondary/90 text-secondary-foreground text-lg px-8 py-6 h-auto font-semibold"
+            >
+              <Link to="/schedule">
+                <Calendar className="mr-2 h-5 w-5" />
+                Schedule Service
+              </Link>
+            </Button>
+            <Button 
+              asChild 
+              size="lg" 
+              variant="outline"
+              className="border-2 text-lg px-8 py-6 h-auto font-semibold"
             >
               <Link to="/contact">Request Free Estimate</Link>
             </Button>

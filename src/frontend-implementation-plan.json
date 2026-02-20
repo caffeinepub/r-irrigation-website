@@ -1,361 +1,92 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "R Irrigation Local Service Website with SEO City Pages",
+  "title": "Add online scheduling and replace logo with user-provided image",
   "requirements": [
     {
-      "id": "REQ-1",
-      "summary": "Create header component with logo, navigation, phone number, and CTA button",
+      "id": "REQ-16",
+      "summary": "Create a new scheduling page with service appointment request form including customer details, service type selection, and confirmation message",
       "acceptanceCriteria": [
-        "Header displays logo on the left side",
-        "Navigation includes all five menu items: Home, Services, Service Areas, Reviews, Contact",
-        "Phone number (973) 955-8340 is prominently displayed in the header",
-        "'Get Free Estimate' button is visible in the header"
+        "A new 'Schedule Service' link appears in the header navigation menu",
+        "The scheduling page includes all required form fields with appropriate input types",
+        "Form validation prevents submission with missing required fields",
+        "Service type dropdown includes all six services from the ServicesGrid component",
+        "Upon successful form submission, a confirmation message is displayed to the user",
+        "The page maintains the existing mobile-first responsive design with deep blue and green color scheme"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/Schedule.tsx",
+          "operation": "create",
+          "description": "Create a new Schedule page component with a form containing fields for customer name, phone number, email, service address, preferred date, preferred time window (morning/afternoon/evening dropdown), service type dropdown matching the six services (Sprinkler Repair, Sprinkler Installation, Spring Startup, Winterization, Leak Detection, System Upgrades), and additional notes textarea. Include form validation using controlled inputs and state management. Display a confirmation message upon form submission. Use Tailwind CSS classes consistent with the existing deep blue and green color scheme, and ensure mobile-first responsive design matching the Contact page styling."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Add a new route for the Schedule page at path '/schedule' in the TanStack Router configuration, importing and rendering the Schedule component."
+        }
+      ]
+    },
+    {
+      "id": "REQ-17",
+      "summary": "Add 'Schedule Service' navigation link to header menu between Contact and phone number, routing to /schedule",
+      "acceptanceCriteria": [
+        "The 'Schedule Service' link appears in the Header component navigation",
+        "Clicking the link navigates to /schedule route",
+        "Active state styling is applied when on the scheduling page",
+        "Link is responsive and appears in the mobile hamburger menu"
       ],
       "file_operations": [
         {
           "path": "frontend/src/components/Header.tsx",
+          "operation": "modify",
+          "description": "Add a new 'Schedule Service' navigation link to the header menu between the 'Contact' link and the phone number section. Include the link in both desktop navigation and mobile hamburger menu. Apply active state styling using the same pattern as other navigation links (checking current route and applying text-primary class). Ensure the link routes to '/schedule' and maintains responsive behavior."
+        }
+      ]
+    },
+    {
+      "id": "REQ-18",
+      "summary": "Replace all instances of R Irrigation logo with user-provided logo image file, maintaining sizing and responsive behavior",
+      "acceptanceCriteria": [
+        "The new logo image replaces the existing R Irrigation logo in the Header component",
+        "Logo maintains appropriate dimensions and aspect ratio on desktop and mobile",
+        "Logo is clickable and navigates to the homepage",
+        "Logo displays clearly on both light and dark backgrounds if applicable",
+        "Image is optimized for web delivery"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/9962DF11-5A7E-4582-A58F-DBC7D2FE64A8.png",
           "operation": "create",
-          "description": "Create header component with R Irrigation logo (frontend/public/assets/generated/logo.dim_300x100.png), navigation menu linking to Home, Services, Service Areas, Reviews, and Contact pages, prominently displayed phone number (973) 955-8340, and 'Get Free Estimate' button. Use shadcn/ui Button component for CTA. Style with deep blue and bright green theme colors."
+          "description": "Copy the user-provided logo image file (9962DF11-5A7E-4582-A58F-DBC7D2FE64A8.png) to the frontend public assets directory for use as the new R Irrigation logo."
         },
         {
-          "path": "frontend/src/App.tsx",
+          "path": "frontend/src/components/Header.tsx",
           "operation": "modify",
-          "description": "Import and add Header component at the top of the application layout so it appears on all pages."
+          "description": "Replace the existing logo image source with the new logo image at '/assets/9962DF11-5A7E-4582-A58F-DBC7D2FE64A8.png'. Maintain the existing logo sizing classes and responsive behavior. Ensure the logo remains clickable and navigates to the homepage. Adjust width/height attributes if needed to maintain proper aspect ratio while keeping the logo appropriately sized for both desktop and mobile views."
         }
       ]
     },
     {
-      "id": "REQ-2",
-      "summary": "Create homepage hero section with headline, subheadline, CTAs, and trust line",
+      "id": "REQ-19",
+      "summary": "Add prominent 'Schedule Service' CTA buttons to homepage HeroSection and CTABlock component driving traffic to scheduling page",
       "acceptanceCriteria": [
-        "Hero section displays the exact headline provided",
-        "Subheadline mentions repairs, installs, spring startup, and winterization",
-        "Two CTA buttons are present: 'Call Now' and 'Request Free Estimate'",
-        "Trust line appears with the three bullet points"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/HeroSection.tsx",
-          "operation": "create",
-          "description": "Create hero section component with headline 'Sprinkler & Irrigation Services in Northern New Jersey', subheadline mentioning repairs, installs, spring startup, and winterization services, two CTA buttons ('Call Now' linking to tel:(973) 955-8340 and 'Request Free Estimate'), and trust line displaying 'Licensed & Insured • Fast Response • 5-Star Rated'. Use background image frontend/public/assets/generated/hero-sprinkler.dim_1920x1080.png. Use shadcn/ui Button components for CTAs with high contrast styling."
-        },
-        {
-          "path": "frontend/src/pages/Home.tsx",
-          "operation": "create",
-          "description": "Create homepage that renders HeroSection component as the first section, followed by sections for Why Choose Us, Services Grid, Service Area, Reviews, and CTA Block in that exact order."
-        }
-      ]
-    },
-    {
-      "id": "REQ-3",
-      "summary": "Create 'Why Choose R Irrigation' section with four icon-based benefits",
-      "acceptanceCriteria": [
-        "Section contains exactly four icon-based benefits",
-        "Benefits cover fast service, experienced technicians, reliable work, and Northern NJ coverage"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/WhyChooseUs.tsx",
-          "operation": "create",
-          "description": "Create 'Why Choose R Irrigation' section displaying four icon-based benefits: fast service using frontend/public/assets/generated/icon-fast-service.dim_64x64.png, experienced technicians using frontend/public/assets/generated/icon-experienced.dim_64x64.png, reliable work using frontend/public/assets/generated/icon-reliable.dim_64x64.png, and serving Northern NJ using frontend/public/assets/generated/icon-location.dim_64x64.png. Display in a responsive grid layout with icons, titles, and brief descriptions."
-        },
-        {
-          "path": "frontend/src/pages/Home.tsx",
-          "operation": "modify",
-          "description": "Import and add WhyChooseUs component as the second section on the homepage, immediately after HeroSection."
-        }
-      ]
-    },
-    {
-      "id": "REQ-4",
-      "summary": "Create services grid displaying six irrigation services",
-      "acceptanceCriteria": [
-        "Grid displays all six services listed",
-        "Each service has a clear title and brief description"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/ServicesGrid.tsx",
-          "operation": "create",
-          "description": "Create services grid component displaying six services in a responsive grid: Sprinkler Repair, Sprinkler Installation, Spring Startup, Winterization, Leak Detection, and System Upgrades. Each service card includes a title and brief description relevant to homeowners. Use shadcn/ui Card components with deep blue and bright green styling."
-        },
-        {
-          "path": "frontend/src/pages/Home.tsx",
-          "operation": "modify",
-          "description": "Import and add ServicesGrid component as the third section on the homepage, after WhyChooseUs."
-        }
-      ]
-    },
-    {
-      "id": "REQ-5",
-      "summary": "Create service area section highlighting Clifton NJ and nearby towns",
-      "acceptanceCriteria": [
-        "Section highlights Clifton NJ as a primary service area",
-        "Additional towns from Bergen and Passaic County are listed"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/ServiceAreaSection.tsx",
-          "operation": "create",
-          "description": "Create service area section prominently featuring Clifton NJ as the primary service area, plus additional towns from Bergen County (Paramus, Hackensack, etc.) and Passaic County (Wayne, etc.). Display towns in an organized list or grid format with Clifton NJ emphasized."
-        },
-        {
-          "path": "frontend/src/pages/Home.tsx",
-          "operation": "modify",
-          "description": "Import and add ServiceAreaSection component as the fourth section on the homepage, after ServicesGrid."
-        }
-      ]
-    },
-    {
-      "id": "REQ-6",
-      "summary": "Create customer reviews section with 2-3 realistic testimonials",
-      "acceptanceCriteria": [
-        "Section displays 2-3 testimonials",
-        "Each testimonial includes a customer name and specific feedback",
-        "Testimonials appear realistic and relevant to irrigation services"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/ReviewsSection.tsx",
-          "operation": "create",
-          "description": "Create customer reviews section displaying 2-3 realistic testimonial examples with customer names (first name + last initial), specific service descriptions (e.g., 'Fixed our sprinkler system leak quickly'), and 5-star ratings. Use shadcn/ui Card components for testimonial display."
-        },
-        {
-          "path": "frontend/src/pages/Home.tsx",
-          "operation": "modify",
-          "description": "Import and add ReviewsSection component as the fifth section on the homepage, after ServiceAreaSection."
-        }
-      ]
-    },
-    {
-      "id": "REQ-7",
-      "summary": "Create prominent CTA block encouraging phone calls for estimates",
-      "acceptanceCriteria": [
-        "CTA block is visually prominent with large, bold styling",
-        "Copy encourages immediate action (phone calls)",
-        "Phone number or contact button is clearly visible"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/CTABlock.tsx",
-          "operation": "create",
-          "description": "Create a large, bold, visually prominent call-to-action block encouraging immediate phone calls for estimates and service requests. Display phone number (973) 955-8340 prominently with a clickable phone link. Use high-contrast colors (deep blue background with bright green accents) and large typography. Include a shadcn/ui Button component styled for maximum visibility."
-        },
-        {
-          "path": "frontend/src/pages/Home.tsx",
-          "operation": "modify",
-          "description": "Import and add CTABlock component as the sixth section on the homepage, after ReviewsSection and before the footer."
-        }
-      ]
-    },
-    {
-      "id": "REQ-8",
-      "summary": "Create footer with contact details, service areas, and estimate request form",
-      "acceptanceCriteria": [
-        "Footer displays phone number (973) 955-8340",
-        "Email field is present as a placeholder",
-        "Service areas are listed",
-        "Contact form includes fields for name, phone, email, and message"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/Footer.tsx",
-          "operation": "create",
-          "description": "Create footer component displaying phone number (973) 955-8340, email placeholder, service areas list (Clifton, Paramus, Wayne, Hackensack, and additional towns), and a simple contact form for estimate requests with fields for name, phone, email, and message. Use shadcn/ui Input and Textarea components for form fields and Button component for submit. Style with deep blue background and white/light text."
-        },
-        {
-          "path": "frontend/src/App.tsx",
-          "operation": "modify",
-          "description": "Import and add Footer component at the bottom of the application layout so it appears on all pages."
-        }
-      ]
-    },
-    {
-      "id": "REQ-9",
-      "summary": "Create SEO-optimized city page for Sprinkler Repair Clifton NJ",
-      "acceptanceCriteria": [
-        "Page exists at a route for Clifton NJ sprinkler repair",
-        "Content is uniquely written for Clifton (not duplicated from other pages)",
-        "Page includes local references and service area details",
-        "CTA buttons link to contact or phone actions"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/pages/CliftonNJ.tsx",
-          "operation": "create",
-          "description": "Create SEO-optimized city page for 'Sprinkler Repair Clifton NJ' with unique localized content targeting Clifton homeowners. Include H1 with 'Sprinkler Repair Clifton NJ', local service details specific to Clifton area, benefits of choosing R Irrigation for Clifton residents, and prominent CTA buttons linking to phone (973) 955-8340 and estimate request. Content must be unique and not duplicated from other city pages. Use professional, trustworthy tone appropriate for homeowners age 30+."
-        }
-      ]
-    },
-    {
-      "id": "REQ-10",
-      "summary": "Create SEO-optimized city page for Irrigation Services Paramus NJ",
-      "acceptanceCriteria": [
-        "Page exists at a route for Paramus NJ irrigation services",
-        "Content is uniquely written for Paramus (not duplicated from other pages)",
-        "Page includes local references and service area details",
-        "CTA buttons link to contact or phone actions"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/pages/ParamusNJ.tsx",
-          "operation": "create",
-          "description": "Create SEO-optimized city page for 'Irrigation Services Paramus NJ' with unique localized content targeting Paramus homeowners. Include H1 with 'Irrigation Services Paramus NJ', local service details specific to Paramus area, benefits of choosing R Irrigation for Paramus residents, and prominent CTA buttons linking to phone (973) 955-8340 and estimate request. Content must be unique and not duplicated from other city pages. Use professional, trustworthy tone appropriate for homeowners age 30+."
-        }
-      ]
-    },
-    {
-      "id": "REQ-11",
-      "summary": "Create SEO-optimized city page for Sprinkler Repair Wayne NJ",
-      "acceptanceCriteria": [
-        "Page exists at a route for Wayne NJ sprinkler repair",
-        "Content is uniquely written for Wayne (not duplicated from other pages)",
-        "Page includes local references and service area details",
-        "CTA buttons link to contact or phone actions"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/pages/WayneNJ.tsx",
-          "operation": "create",
-          "description": "Create SEO-optimized city page for 'Sprinkler Repair Wayne NJ' with unique localized content targeting Wayne homeowners. Include H1 with 'Sprinkler Repair Wayne NJ', local service details specific to Wayne area, benefits of choosing R Irrigation for Wayne residents, and prominent CTA buttons linking to phone (973) 955-8340 and estimate request. Content must be unique and not duplicated from other city pages. Use professional, trustworthy tone appropriate for homeowners age 30+."
-        }
-      ]
-    },
-    {
-      "id": "REQ-12",
-      "summary": "Create SEO-optimized city page for Sprinkler Service Hackensack NJ",
-      "acceptanceCriteria": [
-        "Page exists at a route for Hackensack NJ sprinkler service",
-        "Content is uniquely written for Hackensack (not duplicated from other pages)",
-        "Page includes local references and service area details",
-        "CTA buttons link to contact or phone actions"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/pages/HackensackNJ.tsx",
-          "operation": "create",
-          "description": "Create SEO-optimized city page for 'Sprinkler Service Hackensack NJ' with unique localized content targeting Hackensack homeowners. Include H1 with 'Sprinkler Service Hackensack NJ', local service details specific to Hackensack area, benefits of choosing R Irrigation for Hackensack residents, and prominent CTA buttons linking to phone (973) 955-8340 and estimate request. Content must be unique and not duplicated from other city pages. Use professional, trustworthy tone appropriate for homeowners age 30+."
-        }
-      ]
-    },
-    {
-      "id": "REQ-13",
-      "summary": "Implement mobile-first responsive design with deep blue and bright green color scheme",
-      "acceptanceCriteria": [
-        "Design is fully responsive and mobile-first",
-        "Primary colors are deep blue and bright green",
-        "Background is white or light colored",
-        "CTA buttons are large with high contrast",
-        "Page loads quickly on mobile devices"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/index.css",
-          "operation": "modify",
-          "description": "Define global CSS variables for deep blue (primary color for headers, text accents) and bright green (secondary color for CTAs, highlights) water/lawn theme. Set white or light background color as default. Apply mobile-first responsive typography and spacing. Ensure fast-loading optimizations by using system fonts and minimal custom styles."
-        },
-        {
-          "path": "frontend/tailwind.config.js",
-          "operation": "modify",
-          "description": "Configure Tailwind theme to use deep blue as primary color and bright green as secondary/accent color. Set default background to white/light. Configure responsive breakpoints for mobile-first design. Ensure CTA button classes use high contrast colors and large sizing for visibility on mobile devices."
-        }
-      ]
-    },
-    {
-      "id": "REQ-14",
-      "summary": "Apply professional, trustworthy, and clear tone throughout all content",
-      "acceptanceCriteria": [
-        "All copy maintains a professional and trustworthy tone",
-        "Language is clear and direct without jargon",
-        "Content is appropriate for homeowners aged 30 and older"
+        "A 'Schedule Service' button appears in the HeroSection with consistent styling to existing CTA buttons",
+        "A 'Schedule Service' button or link appears in the CTABlock component",
+        "Buttons use the bright green accent color to stand out",
+        "Clicking buttons navigates to /schedule route",
+        "Buttons are mobile-responsive and maintain hierarchy with phone number CTA"
       ],
       "file_operations": [
         {
           "path": "frontend/src/components/HeroSection.tsx",
           "operation": "modify",
-          "description": "Review and ensure all copy uses professional, trustworthy, and clear language suitable for homeowners age 30+. Avoid jargon and use direct language appropriate for contractor services."
-        },
-        {
-          "path": "frontend/src/components/WhyChooseUs.tsx",
-          "operation": "modify",
-          "description": "Review and ensure all copy uses professional, trustworthy, and clear language suitable for homeowners age 30+. Avoid jargon and use direct language appropriate for contractor services."
-        },
-        {
-          "path": "frontend/src/components/ServicesGrid.tsx",
-          "operation": "modify",
-          "description": "Review and ensure all service descriptions use professional, trustworthy, and clear language suitable for homeowners age 30+. Avoid jargon and use direct language appropriate for contractor services."
-        },
-        {
-          "path": "frontend/src/components/ReviewsSection.tsx",
-          "operation": "modify",
-          "description": "Review and ensure all testimonial copy uses professional, trustworthy, and clear language that sounds realistic for homeowners age 30+."
+          "description": "Add a new 'Schedule Service' button to the CTA button group alongside the existing 'Call Now' and 'Request Free Estimate' buttons. Use consistent styling with the existing buttons, applying the bright green accent color (bg-secondary class) to make it stand out. Ensure the button navigates to '/schedule' route using Link component. Maintain responsive button layout and sizing for mobile devices."
         },
         {
           "path": "frontend/src/components/CTABlock.tsx",
           "operation": "modify",
-          "description": "Review and ensure CTA copy uses professional, trustworthy, and clear language suitable for homeowners age 30+. Use direct calls-to-action appropriate for contractor services."
-        },
-        {
-          "path": "frontend/src/pages/CliftonNJ.tsx",
-          "operation": "modify",
-          "description": "Review and ensure all localized content uses professional, trustworthy, and clear language suitable for Clifton homeowners age 30+. Avoid jargon and use direct language appropriate for contractor services."
-        },
-        {
-          "path": "frontend/src/pages/ParamusNJ.tsx",
-          "operation": "modify",
-          "description": "Review and ensure all localized content uses professional, trustworthy, and clear language suitable for Paramus homeowners age 30+. Avoid jargon and use direct language appropriate for contractor services."
-        },
-        {
-          "path": "frontend/src/pages/WayneNJ.tsx",
-          "operation": "modify",
-          "description": "Review and ensure all localized content uses professional, trustworthy, and clear language suitable for Wayne homeowners age 30+. Avoid jargon and use direct language appropriate for contractor services."
-        },
-        {
-          "path": "frontend/src/pages/HackensackNJ.tsx",
-          "operation": "modify",
-          "description": "Review and ensure all localized content uses professional, trustworthy, and clear language suitable for Hackensack homeowners age 30+. Avoid jargon and use direct language appropriate for contractor services."
-        }
-      ]
-    },
-    {
-      "id": "REQ-15",
-      "summary": "Implement routing for all main and city-specific pages",
-      "acceptanceCriteria": [
-        "All main navigation pages are routable",
-        "All four city pages have unique routes",
-        "Navigation links correctly route to their respective pages"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/pages/Services.tsx",
-          "operation": "create",
-          "description": "Create Services page displaying detailed information about all six irrigation services offered by R Irrigation. Include service descriptions, benefits, and CTA to contact or request estimate."
-        },
-        {
-          "path": "frontend/src/pages/ServiceAreas.tsx",
-          "operation": "create",
-          "description": "Create Service Areas page listing all towns served in Northern New Jersey, organized by county (Bergen County, Passaic County). Include links to city-specific pages for Clifton, Paramus, Wayne, and Hackensack."
-        },
-        {
-          "path": "frontend/src/pages/Reviews.tsx",
-          "operation": "create",
-          "description": "Create Reviews page displaying an expanded collection of customer testimonials and reviews for R Irrigation services. Include customer names, service types, ratings, and detailed feedback."
-        },
-        {
-          "path": "frontend/src/pages/Contact.tsx",
-          "operation": "create",
-          "description": "Create Contact page featuring prominent display of phone number (973) 955-8340, email placeholder, service hours, and a detailed contact form for estimate requests with fields for name, phone, email, service type, and message. Use shadcn/ui form components."
-        },
-        {
-          "path": "frontend/src/App.tsx",
-          "operation": "modify",
-          "description": "Configure React Router to define routes for all pages: / (Home), /services (Services), /service-areas (ServiceAreas), /reviews (Reviews), /contact (Contact), /clifton-nj (CliftonNJ), /paramus-nj (ParamusNJ), /wayne-nj (WayneNJ), /hackensack-nj (HackensackNJ). Import all page components and set up route definitions. Ensure Header and Footer are rendered outside the router switch so they appear on all pages."
-        },
-        {
-          "path": "frontend/src/components/Header.tsx",
-          "operation": "modify",
-          "description": "Update Header navigation links to use React Router Link components with correct paths: / for Home, /services for Services, /service-areas for Service Areas, /reviews for Reviews, /contact for Contact. Ensure links are properly styled and indicate active route."
+          "description": "Add a 'Schedule Service' button or link to the CTABlock component alongside the existing 'Request Free Estimate' button. Use the bright green accent color (bg-secondary or similar) for visual prominence. Ensure the button/link navigates to '/schedule' route. Maintain the existing visual hierarchy with the phone number remaining the primary CTA, and ensure mobile responsiveness."
         }
       ]
     }
