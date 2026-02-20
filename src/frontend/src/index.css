@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --radius: 0.5rem;
+        /* Deep blue primary - water theme */
+        --primary: 0.35 0.15 240;
+        --primary-foreground: 0.98 0 0;
+        /* Bright green secondary - lawn theme */
+        --secondary: 0.70 0.20 145;
+        --secondary-foreground: 0.98 0 0;
+        /* White/light background */
+        --background: 0.99 0 0;
+        --foreground: 0.15 0.02 240;
+        /* Card styling */
+        --card: 1 0 0;
+        --card-foreground: 0.15 0.02 240;
+        /* Muted elements */
+        --muted: 0.96 0.01 240;
+        --muted-foreground: 0.50 0.02 240;
+        /* Accent - bright green */
+        --accent: 0.70 0.20 145;
+        --accent-foreground: 0.98 0 0;
+        /* Borders and inputs */
+        --border: 0.88 0.02 240;
+        --input: 0.88 0.02 240;
+        --ring: 0.35 0.15 240;
+        /* Destructive */
+        --destructive: 0.577 0.245 27.325;
+        --destructive-foreground: 0.985 0 0;
+        /* Popover */
+        --popover: 1 0 0;
+        --popover-foreground: 0.15 0.02 240;
+    }
+
+    .dark {
+        --background: 0.12 0.02 240;
+        --foreground: 0.98 0 0;
+        --primary: 0.55 0.18 240;
+        --primary-foreground: 0.98 0 0;
+        --secondary: 0.75 0.22 145;
+        --secondary-foreground: 0.12 0.02 240;
+        --card: 0.18 0.02 240;
+        --card-foreground: 0.98 0 0;
+        --muted: 0.25 0.02 240;
+        --muted-foreground: 0.70 0.02 240;
+        --accent: 0.75 0.22 145;
+        --accent-foreground: 0.12 0.02 240;
+        --border: 0.30 0.02 240;
+        --input: 0.30 0.02 240;
+        --ring: 0.55 0.18 240;
+        --popover: 0.18 0.02 240;
+        --popover-foreground: 0.98 0 0;
+    }
+
+    * {
+        @apply border-border;
+    }
+    body {
+        @apply bg-background text-foreground;
+        font-feature-settings: "rlig" 1, "calt" 1;
+    }
+}
+
+@layer utilities {
+    .text-balance {
+        text-wrap: balance;
+    }
+}

@@ -1,0 +1,278 @@
+{
+  "kind": "build_request",
+  "title": "Create R Irrigation local service website with SEO city pages",
+  "projectName": "R Irrigation",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create a header component with R Irrigation logo on the left, navigation menu with links to Home, Services, Service Areas, Reviews, and Contact pages, prominent phone number (973) 955-8340 displayed clearly, and a 'Get Free Estimate' button",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Header displays logo on the left side",
+        "Navigation includes all five menu items: Home, Services, Service Areas, Reviews, Contact",
+        "Phone number (973) 955-8340 is prominently displayed in the header",
+        "'Get Free Estimate' button is visible in the header"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Create homepage hero section with headline 'Sprinkler & Irrigation Services in Northern New Jersey', subheadline mentioning repairs, installs, spring startup, and winterization services, two buttons ('Call Now' and 'Request Free Estimate'), and trust line displaying 'Licensed & Insured • Fast Response • 5-Star Rated'",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Headline: \"Sprinkler & Irrigation Services in Northern New Jersey\"",
+          "Trust line: Licensed & Insured • Fast Response • 5-Star Rated"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Hero section displays the exact headline provided",
+        "Subheadline mentions repairs, installs, spring startup, and winterization",
+        "Two CTA buttons are present: 'Call Now' and 'Request Free Estimate'",
+        "Trust line appears with the three bullet points"
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Create 'Why Choose R Irrigation' section with four icon bullets highlighting fast service, experienced technicians, reliable work, and serving Northern NJ",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Section contains exactly four icon-based benefits",
+        "Benefits cover fast service, experienced technicians, reliable work, and Northern NJ coverage"
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Create services grid section displaying six services: Sprinkler Repair, Sprinkler Installation, Spring Startup, Winterization, Leak Detection, and System Upgrades",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Grid displays all six services listed",
+        "Each service has a clear title and brief description"
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Create service area section mentioning Clifton NJ prominently plus nearby towns in Bergen and Passaic County",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Section highlights Clifton NJ as a primary service area",
+        "Additional towns from Bergen and Passaic County are listed"
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Create customer reviews section displaying 2-3 realistic testimonial examples with customer names and service descriptions",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Section displays 2-3 testimonials",
+        "Each testimonial includes a customer name and specific feedback",
+        "Testimonials appear realistic and relevant to irrigation services"
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "text": "Create a strong call-to-action block as a large, bold section encouraging phone calls for estimates and service requests",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ]
+      },
+      "acceptanceCriteria": [
+        "CTA block is visually prominent with large, bold styling",
+        "Copy encourages immediate action (phone calls)",
+        "Phone number or contact button is clearly visible"
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "text": "Create footer with phone number (973) 955-8340, email placeholder, service areas list, and a simple contact form for estimate requests",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Footer displays phone number (973) 955-8340",
+        "Email field is present as a placeholder",
+        "Service areas are listed",
+        "Contact form includes fields for name, phone, email, and message"
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "text": "Create separate SEO-optimized city page for 'Sprinkler Repair Clifton NJ' with unique localized content targeting homeowners in Clifton, including local service details, benefits, and call-to-action",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Page exists at a route for Clifton NJ sprinkler repair",
+        "Content is uniquely written for Clifton (not duplicated from other pages)",
+        "Page includes local references and service area details",
+        "CTA buttons link to contact or phone actions"
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "text": "Create separate SEO-optimized city page for 'Irrigation Services Paramus NJ' with unique localized content targeting homeowners in Paramus, including local service details, benefits, and call-to-action",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Page exists at a route for Paramus NJ irrigation services",
+        "Content is uniquely written for Paramus (not duplicated from other pages)",
+        "Page includes local references and service area details",
+        "CTA buttons link to contact or phone actions"
+      ]
+    },
+    {
+      "id": "REQ-11",
+      "text": "Create separate SEO-optimized city page for 'Sprinkler Repair Wayne NJ' with unique localized content targeting homeowners in Wayne, including local service details, benefits, and call-to-action",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Page exists at a route for Wayne NJ sprinkler repair",
+        "Content is uniquely written for Wayne (not duplicated from other pages)",
+        "Page includes local references and service area details",
+        "CTA buttons link to contact or phone actions"
+      ]
+    },
+    {
+      "id": "REQ-12",
+      "text": "Create separate SEO-optimized city page for 'Sprinkler Service Hackensack NJ' with unique localized content targeting homeowners in Hackensack, including local service details, benefits, and call-to-action",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Page exists at a route for Hackensack NJ sprinkler service",
+        "Content is uniquely written for Hackensack (not duplicated from other pages)",
+        "Page includes local references and service area details",
+        "CTA buttons link to contact or phone actions"
+      ]
+    },
+    {
+      "id": "REQ-13",
+      "text": "Implement mobile-first responsive design with deep blue and bright green color scheme (water/lawn theme), white or light background, large high-contrast call-to-action buttons, and fast-loading optimizations",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Color scheme: deep blue and bright green (water/lawn theme)",
+          "Mobile-first responsive design"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Design is fully responsive and mobile-first",
+        "Primary colors are deep blue and bright green",
+        "Background is white or light colored",
+        "CTA buttons are large with high contrast",
+        "Page loads quickly on mobile devices"
+      ]
+    },
+    {
+      "id": "REQ-14",
+      "text": "Apply professional, trustworthy, and clear tone throughout all content, written for homeowners age 30+ with direct language suitable for contractor services",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Professional",
+          "Trustworthy",
+          "Clear and direct",
+          "Written for homeowners age 30+"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All copy maintains a professional and trustworthy tone",
+        "Language is clear and direct without jargon",
+        "Content is appropriate for homeowners aged 30 and older"
+      ]
+    },
+    {
+      "id": "REQ-15",
+      "text": "Implement routing for all pages: Home, Services, Service Areas, Reviews, Contact, and the four city-specific SEO pages (Clifton, Paramus, Wayne, Hackensack)",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All main navigation pages are routable",
+        "All four city pages have unique routes",
+        "Navigation links correctly route to their respective pages"
+      ]
+    }
+  ],
+  "constraints": [
+    "Phone number must be exactly (973) 955-8340 throughout the site",
+    "Homepage sections must appear in the exact order specified: Hero, Why Choose Us, Services Grid, Service Area, Reviews, CTA Block, Footer",
+    "Each city page must have unique localized content and not be copy-pasted duplicates",
+    "Color scheme must use deep blue and bright green as primary colors with white/light background"
+  ],
+  "nonGoals": [
+    "Online booking system or appointment scheduling",
+    "Payment processing or e-commerce functionality",
+    "Backend data storage for form submissions",
+    "Real-time chat or customer support features",
+    "Integration with third-party CRM or email marketing tools",
+    "User authentication or login functionality"
+  ],
+  "imageRequirements": {
+    "required": [
+      "R Irrigation company logo featuring water and lawn theme with deep blue and bright green colors (logo.dim_300x100.png)",
+      "Professional sprinkler system in action on a green lawn for hero section background (hero-sprinkler.dim_1920x1080.png)",
+      "Icon representing fast service - clock or speed symbol in deep blue (icon-fast-service.dim_64x64.png)",
+      "Icon representing experienced technicians - tools or technician symbol in deep blue (icon-experienced.dim_64x64.png)",
+      "Icon representing reliable work - checkmark or shield symbol in deep blue (icon-reliable.dim_64x64.png)",
+      "Icon representing Northern NJ service - location pin or map symbol in deep blue (icon-location.dim_64x64.png)"
+    ],
+    "edits": []
+  }
+}

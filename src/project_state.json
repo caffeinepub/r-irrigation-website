@@ -1,0 +1,167 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Mobile-first local service website for R Irrigation, a sprinkler and irrigation company in Northern New Jersey. Clean, professional design with deep blue and bright green color scheme. Primary goal: generate phone calls and estimate requests from homeowners. Includes homepage with hero section, services grid, reviews, and SEO-optimized city pages for Clifton, Paramus, Wayne, and Hackensack NJ.",
+  "architectural_notes": [
+    "Mobile-first responsive layout optimized for fast loading",
+    "Deep blue and bright green color scheme with white/light background",
+    "Multi-page site structure: Home, Services, Service Areas, Reviews, Contact, plus 4 city-specific SEO pages",
+    "Phone number (973) 955-8340 prominently displayed in header",
+    "Professional contractor aesthetic targeting homeowners age 30+"
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- R Irrigation company logo featuring water and lawn theme with deep blue and bright green colors (logo.dim_300x100.png)\n- Professional sprinkler system in action on a green lawn for hero section background (hero-sprinkler.dim_1920x1080.png)\n- Icon representing fast service - clock or speed symbol in deep blue (icon-fast-service.dim_64x64.png)\n- Icon representing experienced technicians - tools or technician symbol in deep blue (icon-experienced.dim_64x64.png)\n- Icon representing reliable work - checkmark or shield symbol in deep blue (icon-reliable.dim_64x64.png)\n- Icon representing Northern NJ service - location pin or map symbol in deep blue (icon-location.dim_64x64.png)",
+  "existing_features": [
+    {
+      "id": "feature-create-a-header-component-with-r-irrigation-logo-on-the-left-navigation-menu-with-links-to-home-services-service-areas-reviews-and-contact-pages-prominent-phone-number-973-955-8340-displayed-clearly-and-a-get-free-estimate-button",
+      "title": "Create a header component with R Irrigation logo on the left, navigation menu with links to Home, Services, Service Areas, Reviews, and Contact pages, prominent phone number (973) 955-8340 displayed clearly, and a 'Get Free Estimate' button",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-homepage-hero-section-with-headline-sprinkler-irrigation-services-in-northern-new-jersey-subheadline-mentioning-repairs-installs-spring-startup-and-winterization-services-two-buttons-call-now-and-request-free-estimate-and-trust-line-displaying-licensed-insured-fast-response-5-star-rated",
+      "title": "Create homepage hero section with headline 'Sprinkler & Irrigation Services in Northern New Jersey', subheadline mentioning repairs, installs, spring startup, and winterization services, two buttons ('Call Now' and 'Request Free Estimate'), and trust line displaying 'Licensed & Insured • Fast Response • 5-Star Rated'",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-why-choose-r-irrigation-section-with-four-icon-bullets-highlighting-fast-service-experienced-technicians-reliable-work-and-serving-northern-nj",
+      "title": "Create 'Why Choose R Irrigation' section with four icon bullets highlighting fast service, experienced technicians, reliable work, and serving Northern NJ",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-services-grid-section-displaying-six-services-sprinkler-repair-sprinkler-installation-spring-startup-winterization-leak-detection-and-system-upgrades",
+      "title": "Create services grid section displaying six services: Sprinkler Repair, Sprinkler Installation, Spring Startup, Winterization, Leak Detection, and System Upgrades",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-service-area-section-mentioning-clifton-nj-prominently-plus-nearby-towns-in-bergen-and-passaic-county",
+      "title": "Create service area section mentioning Clifton NJ prominently plus nearby towns in Bergen and Passaic County",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-customer-reviews-section-displaying-2-3-realistic-testimonial-examples-with-customer-names-and-service-descriptions",
+      "title": "Create customer reviews section displaying 2-3 realistic testimonial examples with customer names and service descriptions",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-strong-call-to-action-block-as-a-large-bold-section-encouraging-phone-calls-for-estimates-and-service-requests",
+      "title": "Create a strong call-to-action block as a large, bold section encouraging phone calls for estimates and service requests",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-footer-with-phone-number-973-955-8340-email-placeholder-service-areas-list-and-a-simple-contact-form-for-estimate-requests",
+      "title": "Create footer with phone number (973) 955-8340, email placeholder, service areas list, and a simple contact form for estimate requests",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-separate-seo-optimized-city-page-for-sprinkler-repair-clifton-nj-with-unique-localized-content-targeting-homeowners-in-clifton-including-local-service-details-benefits-and-call-to-action",
+      "title": "Create separate SEO-optimized city page for 'Sprinkler Repair Clifton NJ' with unique localized content targeting homeowners in Clifton, including local service details, benefits, and call-to-action",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-separate-seo-optimized-city-page-for-irrigation-services-paramus-nj-with-unique-localized-content-targeting-homeowners-in-paramus-including-local-service-details-benefits-and-call-to-action",
+      "title": "Create separate SEO-optimized city page for 'Irrigation Services Paramus NJ' with unique localized content targeting homeowners in Paramus, including local service details, benefits, and call-to-action",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-separate-seo-optimized-city-page-for-sprinkler-repair-wayne-nj-with-unique-localized-content-targeting-homeowners-in-wayne-including-local-service-details-benefits-and-call-to-action",
+      "title": "Create separate SEO-optimized city page for 'Sprinkler Repair Wayne NJ' with unique localized content targeting homeowners in Wayne, including local service details, benefits, and call-to-action",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-separate-seo-optimized-city-page-for-sprinkler-service-hackensack-nj-with-unique-localized-content-targeting-homeowners-in-hackensack-including-local-service-details-benefits-and-call-to-action",
+      "title": "Create separate SEO-optimized city page for 'Sprinkler Service Hackensack NJ' with unique localized content targeting homeowners in Hackensack, including local service details, benefits, and call-to-action",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-mobile-first-responsive-design-with-deep-blue-and-bright-green-color-scheme-water-lawn-theme-white-or-light-background-large-high-contrast-call-to-action-buttons-and-fast-loading-optimizations",
+      "title": "Implement mobile-first responsive design with deep blue and bright green color scheme (water/lawn theme), white or light background, large high-contrast call-to-action buttons, and fast-loading optimizations",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-professional-trustworthy-and-clear-tone-throughout-all-content-written-for-homeowners-age-30-with-direct-language-suitable-for-contractor-services",
+      "title": "Apply professional, trustworthy, and clear tone throughout all content, written for homeowners age 30+ with direct language suitable for contractor services",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-routing-for-all-pages-home-services-service-areas-reviews-contact-and-the-four-city-specific-seo-pages-clifton-paramus-wayne-hackensack",
+      "title": "Implement routing for all pages: Home, Services, Service Areas, Reviews, Contact, and the four city-specific SEO pages (Clifton, Paramus, Wayne, Hackensack)",
+      "reqIds": [
+        "REQ-15"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Homepage with hero section, why choose us, services grid, service areas, reviews, CTA block, and footer with contact form",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Header with logo, navigation menu, prominent phone number (973) 955-8340, and Get Free Estimate button",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "SEO city pages: Sprinkler Repair Clifton NJ, Irrigation Services Paramus NJ, Sprinkler Repair Wayne NJ, Sprinkler Service Hackensack NJ with unique localized content",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Mobile-first responsive design with deep blue and bright green color scheme, white/light background, high-contrast CTA buttons",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "R Irrigation Website",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}
